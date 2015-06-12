@@ -176,7 +176,30 @@ textarea {
        }
      } // END @for $columns
    } // END .grid
-
+#micContainer {
+  max-width: 50%;
+  float:left;
+  #mic {
+    border-radius: 50%;
+    border-width: 3px 3px 3px 3px;
+    border-style: solid;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    padding: 1ex 1em 1ex 1em;
+    margin: .25em .25em .25em .25em;
+  }
+}
+#DriveButtonContainer {
+  display: inline-block;
+  max-width: 50%;
+  align-content: center;
+  vertical-align: middle;
+  margin: 15%;
+  border: 3px solid green;
+  #saveGoogleDrive {
+    width: 5em;
+    height: 3ex;
+  }
+}
 
 /* ==========================================================================
    Helper classes
