@@ -1,0 +1,22 @@
+{
+  "name": "TIY-Mashup",
+  "version": "0.0.0",
+  "authors": [
+    "(gatorpazz <gatorpazz@gmail.com>)"
+  ],
+  "main": "src/index.html",
+  "license": "CC0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "lodash": "~3.9.3",
+    "modernizr": "~2.8.3",
+    "normalize": "~1.0.4"
+  }
+}
