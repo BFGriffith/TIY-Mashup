@@ -21,10 +21,6 @@
         }
       }
     };
-
-
-    // recognition.onstart = function() { ... }
-    // recognition.onerror = function(event) { ... }
   }
 
   $('#test').click(function() {
@@ -32,8 +28,33 @@
     toggleStartStop();
   });
 
+  var clientId = '740349906161-lroh27hgog3klphgonujcvkodvbecpvo.apps.googleusercontent.com';
+  var developerKey = 'e8ffffbd0919dabcceff4a5f7f47b521541a6a82';
+  var accessToken;
 
-
+  function onApiLoad() {
+    gapi.load('auth', authenticateWithGoogle);
+    gapi.load('picker');
+  }
+  function authenticateWithGoogle() {
+    window.gapi.auth.authorize({
+      'client_id': clientId,
+      'scope': ['https://www.googleapis.com/auth/drive']
+    }, handleAuthentication);
+  }
+  function handleAuthentication(result) {
+    if(result && !result.error) {
+      accessToken = result.access_token;
+      setupPicker();
+    }
+  }
+  function setupPicker() {
+    var picker = new google.picker.PickerBuilder()
+      .setOAuthToken(accessToken)
+      .setDeveloperKey(developerKey)
+      .build();
+    picker.setVisible(true);
+  }
 
   function toggleStartStop() {
     if (recognizing) {
