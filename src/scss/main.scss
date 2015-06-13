@@ -160,6 +160,7 @@ $mq-width-xl: 120em !global;
 #textarea {
   background-color: gray;
   color: white;
+  width: 98.5%;
 }
 #micContainer {
     max-width: 50%;
@@ -182,54 +183,6 @@ $mq-width-xl: 120em !global;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
     background-color: silver;
 }
-.grid {
-  $gutter-size: 2em;
-  $gutter-side: left;
-  width: auto;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  background-color: lightgrey;
-  outline: 2px solid red;
-  @extend .clearfix;
-  @mixin unit($columns, $max-columns, $property: width) {
-    #{$property}: percentage($columns/$max-columns);
-    float: left;
-    background-color: gray;
-    outline: 2px solid blue;
-    padding-#{$gutter-side}: $gutter-size;
-    box-sizing: border-box;
-    &:first-child {
-      padding-#{$gutter-side}: 0;
-    }
-  }
-  @for $columns from 1 through 6 {
-    & > .unit-#{$columns} {
-      @include unit($columns, 6);
-      @include mq-lg {
-        padding-#{$gutter-side}: $gutter-size / 2;
-      }
-      @include mq-md {
-        padding-left: 0;
-      }
-      @include mq-sm {
-        width: 100%;
-      }
-    }
-    // END .unit-${columns}
-  }
-  // END @for $columns
-  @for $columns from 1 to 6 {
-    & > .push-#{$columns} {
-      @include unit($columns, 6, margin-left);
-      @include mq-sm {
-        margin-left: 0;
-      }
-    }
-  }
-  // END @for $columns
-}
-// END .grid
 .tabs {
   margin: 0;
   padding: 0;
@@ -244,10 +197,6 @@ $mq-width-xl: 120em !global;
     border-bottom: none;
     box-sizing: border-box;
   }
-}
-
-textarea {
-  width: 98.5%;
 }
 
 #micContainer {
