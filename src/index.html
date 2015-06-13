@@ -15,7 +15,12 @@
 <body>
     <div class="grid example">
         <div class="unit-1">
-            <span>1</span>
+            <nav>
+              <ul class ="tabs">
+                <li class="tab">tab1</li><!--
+                --><li class="tab">tab2</li>
+              </ul>
+            </nav>
         </div>
         <div class="unit-1">
           <textarea id="textarea" rows=10 cols=50></textarea>
@@ -39,6 +44,7 @@
     <script src="../bower_components/lodash/lodash.min.js"></script>
     <script src="../bower_components/normalize/normalize.min.js"></script>
     <!-- endbower -->
+    <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
     <script src="js/main.js"></script>
 </body>
 

@@ -177,6 +177,22 @@ textarea {
      } // END @for $columns
    } // END .grid
 
+   .tabs {
+     margin: 0;
+     padding: 0;
+     .tab {
+       display: inline-block;
+       background-color: blue;
+       list-style: none;
+       width: 50%;
+       text-align: center;
+       padding: 3ex 0;
+       border: 1px solid black;
+       border-bottom: none;
+       box-sizing: border-box;
+     }
+   }
+
 
 /* ==========================================================================
    Helper classes
