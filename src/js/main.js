@@ -1,5 +1,7 @@
 (function(window) {
 
+
+
     var $textArea = $('#textarea');
     if (!('webkitSpeechRecognition' in window)) {
         upgrade();
@@ -32,6 +34,10 @@
         toggleStartStop();
     });
 
+    $(".DriveButtonContainer").click(function() {
+      window.location = $(this).find("a").attr("href");
+      return false;
+    });
 
     //gapi.savetodrive.go();
 
@@ -107,4 +113,5 @@
             });
         };
     })(jQuery);
+
 })(window);

@@ -83,12 +83,12 @@ textarea {
   margin: 0;
   padding: 0;
   background-color: lightgrey;
-  outline: 2px solid red; }
+  outline: 2px solid black; }
   .grid > .unit-1 {
     width: 16.66667%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .unit-1:first-child {
@@ -106,7 +106,7 @@ textarea {
     width: 33.33333%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .unit-2:first-child {
@@ -124,7 +124,7 @@ textarea {
     width: 50%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .unit-3:first-child {
@@ -142,7 +142,7 @@ textarea {
     width: 66.66667%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .unit-4:first-child {
@@ -160,7 +160,7 @@ textarea {
     width: 83.33333%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .unit-5:first-child {
@@ -178,7 +178,7 @@ textarea {
     width: 100%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .unit-6:first-child {
@@ -196,7 +196,7 @@ textarea {
     margin-left: 16.66667%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .push-1:first-child {
@@ -208,7 +208,7 @@ textarea {
     margin-left: 33.33333%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .push-2:first-child {
@@ -220,7 +220,7 @@ textarea {
     margin-left: 50%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .push-3:first-child {
@@ -232,7 +232,7 @@ textarea {
     margin-left: 66.66667%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .push-4:first-child {
@@ -244,7 +244,7 @@ textarea {
     margin-left: 83.33333%;
     float: left;
     background-color: gray;
-    outline: 2px solid blue;
+    outline: 2px dashed black;
     padding-left: 2em;
     box-sizing: border-box; }
     .grid > .push-5:first-child {
@@ -253,27 +253,50 @@ textarea {
       .grid > .push-5 {
         margin-left: 0; } }
 
+#textarea {
+  background-color: gray;
+  color: white; }
+
 #micContainer {
   max-width: 50%;
   float: left; }
   #micContainer #mic {
     border-radius: 50%;
-    border-width: 3px 3px 3px 3px;
+    border-width: 2px 2px 2px 2px black;
     border-style: solid;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.35);
-    padding: 1ex 1em 1ex 1em;
-    margin: 0.25em 0.25em 0.25em 0.25em; }
+    padding: 1em;
+    margin: 0.25em;
+    -webkit-transition: color 2s, outline-color 0.7s ease-out, background-color 0.7s ease-out;
+    -moz-transition: color 2s, outline-color 0.7s ease-out, background-color 0.7s ease-out;
+    -o-transition: color 2s, outline-color 0.7s ease-out, background-color 0.7s ease-out;
+    transition: color 2s, outline-color 0.7s ease-out, background-color 0.7s ease-out; }
+
+#mic:hover {
+  border-width: 5px 5px 5px 5px dashed black;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.35);
+  background-color: silver; }
 
 #DriveButtonContainer {
   display: inline-block;
-  max-width: 50%;
+  float: left;
   align-content: center;
   vertical-align: middle;
-  margin: 15%;
-  border: 3px solid green; }
+  border-width: 3px 3px 3px 3px;
+  border-style: solid;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  padding: 14%;
+  margin: 0.5em;
+  background: #ededed; }
   #DriveButtonContainer #saveGoogleDrive {
     width: 5em;
     height: 3ex; }
+
+#DriveButtonContainer:hover {
+  border-width: white dashed 5px 5px 5px 5px;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.35);
+  background-color: silver; }
 
 /* ==========================================================================
    Helper classes
