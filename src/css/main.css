@@ -253,6 +253,21 @@ textarea {
       .grid > .push-5 {
         margin-left: 0; } }
 
+<<<<<<< HEAD
+.tabs {
+  margin: 0;
+  padding: 0; }
+  .tabs .tab {
+    display: inline-block;
+    background-color: blue;
+    list-style: none;
+    width: 50%;
+    text-align: center;
+    padding: 3ex 0;
+    border: 1px solid black;
+    border-bottom: none;
+    box-sizing: border-box; }
+=======
 #micContainer {
   max-width: 50%;
   float: left; }
@@ -274,6 +289,7 @@ textarea {
   #DriveButtonContainer #saveGoogleDrive {
     width: 5em;
     height: 3ex; }
+>>>>>>> 5e356d95d5f5912fffcd592e30bb782487133245
 
 /* ==========================================================================
    Helper classes
