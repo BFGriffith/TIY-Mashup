@@ -27,13 +27,13 @@
         // recognition.onerror = function(event) { ... }
     }
 
-    $('#test').click(function() {
+    $('#micContainer').click(function() {
         console.log('Recording!');
         toggleStartStop();
     });
 
 
-    gapi.savetodrive.go();
+    //gapi.savetodrive.go();
 
 
     function toggleStartStop() {
