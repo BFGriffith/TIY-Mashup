@@ -3,3 +3,4 @@ node_modules
 .DS_Store
 .yo-rc.json
 npm-debug.log
+src/css/main.css
