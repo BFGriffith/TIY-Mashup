@@ -84,6 +84,9 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+html {
+  background-color: gray;
+}
 //Thanks to @al_the_x for showing us this starting point...
 $mq-width-sm: 30em !global;
 $mq-width-md: 55em !global;
@@ -127,7 +130,6 @@ $mq-width-xl: 120em !global;
         #{$property}: percentage($columns/$max-columns);
         float: left;
         background-color: gray;
-        outline: 2px dashed white;
         padding-#{$gutter-side}: $gutter-size;
         box-sizing: border-box;
         &:first-child {
@@ -138,6 +140,8 @@ $mq-width-xl: 120em !global;
         & > .unit-#{$columns} {
             @include unit($columns, 6);
             @include mq-xl {
+              padding-#{$gutter-side}: 1;
+
                 .tabs {
                   padding-left: 0;
                   padding-right: 1em;
@@ -145,22 +149,47 @@ $mq-width-xl: 120em !global;
                   margin-right: 1em;
                 }
                 #textBox {
-                  padding-left: 2em;
+                  width: 94%;
                   padding-right: 2em;
+                  margin: 2em;
                 }
                 #DriveButtonContainer {
                   float: left;
                 }
             }
             @include mq-lg {
-              padding-#{$gutter-side}: 0;
-
+              padding-#{$gutter-side}: 1;
+              .tabs {
+              padding-right: 2em;
+              margin-right: 0;
+              }
+              #textBox {
+                padding-right: 2em;
+                width: 94%;
+              }
             }
             @include mq-md {
-                padding-left: 0;
+                width: 100%;
+                padding-#{$gutter-side}: 0;
+                .tabs {
+                padding-right: 0;
+                margin-right: 0;
+              }
+              #textBox {
+                padding-right: 2em;
+                width: 96.5%;
+              }
             }
             @include mq-sm {
                 width: 100%;
+                padding-#{$gutter-side}: 0;                .tabs {
+                padding-right: 0;
+                margin-right: 0;
+              }
+              #textBox {
+                padding-right: 2em;
+                width: 98%;
+              }
             }
         }// END .unit-${columns}
     }// END @for $columns
@@ -177,19 +206,16 @@ $mq-width-xl: 120em !global;
     content-align: center;
     background-color: gray;
     color: white;
-    width: 99.5%;
+    width: 99%;
     font-size: 14pt;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: Futura, Monaco, sans-serif;
 }
 #instructions {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: white;
+  font-family: Futura, Monaco, sans-serif;
   text-align: center;
   font-size: 10pt;
-  #arrow {
-    float: left;
-    align-self: baseline;
-    font-weight: bolder;
-  }
+  padding: .2em;
 }
 #micContainer {
     max-width: 50%;
@@ -202,6 +228,7 @@ $mq-width-xl: 120em !global;
         box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
         padding: .5em;
         margin: .25em;
+        background: gray;
         transition: all .2s ease-in-out;
         -webkit-transition: color 2s, outline-color 0.7s ease-out, background-color 0.7s ease-out;
         -moz-transition: color 2s, outline-color 0.7s ease-out, background-color 0.7s ease-out;
@@ -218,14 +245,15 @@ $mq-width-xl: 120em !global;
 #DriveButtonContainer {
     display:inline-block;
     float: right;
+    border-radius: 50%;
     align-content: center;
     vertical-align: center;
     border-width: 3px 3px 3px 3px;
     border-style: solid;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
     text-align: center;
-    padding: 9%;
-    margin: 1em;
+    padding: 7%;
+    margin: .25em;
     background: #ededed;
     transition: all .2s ease-in-out;
     #saveGoogleDrive {
@@ -257,7 +285,7 @@ $mq-width-xl: 120em !global;
         border: 1px solid black;
         border-bottom: none;
         box-sizing: border-box;
-        font-family: "Comic Sans MS", cursive, sans-serif;
+        font-family: Futura, Monaco, sans-serif;
         transition: all .2s ease-in-out;
     }
     .tab:hover {
@@ -267,11 +295,13 @@ $mq-width-xl: 120em !global;
       float: left;
       margin-left: 0.5%;
       margin-top: 0.5%;
+      border-bottom: 2px dashed white;
     }
     #tab2 {
       float: right;
       margin-right: 0.5%;
       margin-top: 0.5%;
+      border-bottom: 2px dashed white;
     }
     .tab:hover {
       border-width: white dashed 5px 5px 5px 5px;
@@ -287,6 +317,11 @@ $mq-width-xl: 120em !global;
   margin: 0;
   padding-bottom: 1ex;
   border-bottom: 3px black dashed;
+  font-family: Futura, Monaco, sans-serif;
+}
+p {
+  font-family: Futura, Monaco, sans-serif;
+  padding: 1ex;
 }
 }
 /* ==========================================================================
