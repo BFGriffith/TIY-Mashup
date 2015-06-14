@@ -185,14 +185,13 @@ $mq-width-xl: 120em !global;
     display: inline-block;
     float: left;
     align-content: center;
-    vertical-align: middle;
-    background-color: gray;
+    vertical-align: center;
     border-width: 3px 3px 3px 3px;
     border-style: solid;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
     text-align: center;
-    padding: 14%;
-    margin: 0.5em;
+    padding: 10%;
+    margin: 1em;
     background: #ededed;
     #saveGoogleDrive {
         width: 5em;
