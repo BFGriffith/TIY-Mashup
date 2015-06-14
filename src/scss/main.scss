@@ -142,12 +142,8 @@ $mq-width-xl: 120em !global;
             @include mq-sm {
                 width: 100%;
             }
-        }
-
-        // END .unit-${columns}
-    }
-
-    // END @for $columns
+        }// END .unit-${columns}
+    }// END @for $columns
     @for $columns from 1 to 6 {
         & > .push-#{$columns} {
             @include unit($columns, 6, margin-left);
@@ -155,16 +151,14 @@ $mq-width-xl: 120em !global;
                 margin-left: 0;
             }
         }
-    }
-
-    // END @for $columns
-}
-
-// END .grid
+    }// END @for $columns
+}// END .grid
 #textarea {
     background-color: gray;
     color: white;
     width: 98.5%;
+    font-size: 14pt;
+    font-style: sans-serif;
 }
 #micContainer {
     max-width: 50%;
@@ -192,6 +186,7 @@ $mq-width-xl: 120em !global;
     float: left;
     align-content: center;
     vertical-align: middle;
+    background-color: gray;
     border-width: 3px 3px 3px 3px;
     border-style: solid;
     box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
@@ -212,19 +207,41 @@ $mq-width-xl: 120em !global;
 .tabs {
     margin: 0;
     padding: 0;
+    align-content: center;
+    vertical-align: bottom;
     .tab {
         display: inline-block;
-        background-color: blue;
+        background-color: #ededed;
         list-style: none;
-        width: 50%;
+        width: 49.5%;
+        align-content: center;
+        vertical-align: bottom;
         text-align: center;
-        padding: 3ex 0;
+        padding: 1ex;
         border: 1px solid black;
         border-bottom: none;
         box-sizing: border-box;
+        font-style: Arial sans-serif;
+    }
+    #tab2 {
+      float: right;
+    }
+    .tab:hover {
+      border-width: white dashed 5px 5px 5px 5px;
+      box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+      background-color: silver;
     }
 }
-
+#notes {
+  padding-right: 2em;
+#notesHeading {
+  padding: 1ex;
+  content-align: top;
+  margin: 0;
+  padding-bottom: 1ex;
+  border-bottom: 3px black dashed;
+}
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
