@@ -25,7 +25,15 @@
         <div class="unit-1">
             <textarea class="hide" id="textarea" rows=10 cols=50></textarea>
             <section class="hidden" id="notes">
-              <h1>This is where notes will go</h1>
+              <div id="yourNotes">
+                <h1>Your Notes</h1>
+              </div>
+              <button id="fileCreate">Create File</button>
+              <a download="notes.txt" id="downloadLink" class="hidden">Download</a>
+              <div id="dropboxButton">
+
+              </div>
+              <a href="https://dl.dropboxusercontent.com/s/deroi5nwm6u7gdf/advice.png" class="dropbox-saver"></a>
             </section>
         </div>
         <div class="unit-1 hide">
@@ -46,6 +54,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="5vw3vkv9onbwac1"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!-- bower:js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
