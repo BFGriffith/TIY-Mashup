@@ -64,6 +64,12 @@
     $("#downloadLink").removeClass('hidden');
   });
 
+  $("#downloadLink").click(function() {
+    $("#downloadLink").addClass('hidden');
+    notes = [];
+    $("#yourNotes p").remove();
+  });
+
   function toggleStartStop() {
     if (recognizing) {
       recognition.stop();
