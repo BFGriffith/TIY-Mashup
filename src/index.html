@@ -13,20 +13,20 @@
 </head>
 
 <body>
-    <div class="grid example">
-        <div class="unit-1">
+    <div class="grid">
+        <div class="unit-6">
             <nav>
               <ul class ="tabs">
-                <li class="tab" id="tab1">Record</li><!--
-                --><li class="tab" id="tab2">Notes</li>
+                <li class="tab" id="tab1"><small>transcribe</small><br><strong>dictation:</strong></li>
+                <li class="tab" id="tab2"><small>transcribed</small><br><strong>notes:</strong></li>
               </ul>
             </nav>
         </div>
-        <div class="unit-1">
-            <textarea class="hide" id="textarea" rows=10 cols=50></textarea>
+        <div class="unit-6" id="textBox">
+            <textarea class="hide" id="textarea" rows=10 cols=20></textarea>
             <section class="hidden" id="notes">
               <div id="yourNotes">
-                <h1>Your Notes</h1>
+                <h2 id="notesHeading"><small>transcribed</small><br>NOTES:</h2>
               </div>
               <button id="fileCreate">Create File</button>
               <a download="notes.txt" id="downloadLink" class="hidden">Download</a>
@@ -36,16 +36,16 @@
               <a href="https://dl.dropboxusercontent.com/s/deroi5nwm6u7gdf/advice.png" class="dropbox-saver"></a>
             </section>
         </div>
-        <div class="unit-1 hide">
-            <span>3</span>
+        <div class="unit-6 hide">
+            <span> </span>
         </div>
-        <div class="unit-1 hide">
-            <span>4</span>
+        <div class="unit-6 hide">
+            <span> </span>
         </div>
-        <div class="unit-1 hide">
-            <span>5</span>
+        <div class="unit-3 hide" id="instructions">
+            <span id="instructions">use the microphone button to start and stop recording</span>
         </div>
-        <div class="unit-1 hide">
+        <div class="unit-6 hide" id="buttonsContainer">
             <div id="micContainer">
                 <img src="img/mic.png" width="50%" height="50%" id="mic" />
             </div>
