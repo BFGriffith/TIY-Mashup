@@ -6,7 +6,8 @@
   "scripts": {
     "test": "browser-sync start --server --files='src/js/*.js,src/test/index.html,src/test/spec/**/*.js' --startPath src/test/index.html",
     "start": "browser-sync start --server --files='src/index.html,src/css/*.css,src/js/*.js' --startPath src/index.html",
-    "sass": "node-sass src/scss/main.scss -o src/css/"
+    "sass": "node-sass src/scss/main.scss -o src/css/",
+    "wiredep": "wiredep --src src/index.html"
   },
   "author": "gatorpazz and Epicurean306",
   "license": "CC0",

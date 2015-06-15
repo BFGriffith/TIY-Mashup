@@ -13,32 +13,53 @@
 </head>
 
 <body>
-    <div class="grid example">
-        <div class="unit-1">
-            <span>1</span>
+    <div class="grid">
+        <div class="unit-6">
+            <nav>
+              <ul class ="tabs">
+                <li class="tab" id="tab1"><small>transcribe</small><br><strong>dictation:</strong></li>
+                <li class="tab" id="tab2"><small>transcribed</small><br><strong>notes:</strong></li>
+              </ul>
+            </nav>
         </div>
-        <div class="unit-1">
-            <span>2</span>
+        <div class="unit-6" id="textBox">
+            <textarea class="hide" id="textarea" rows=10 cols=20></textarea>
+            <section class="hidden" id="notes">
+              <div id="yourNotes">
+                <h2 id="notesHeading"><small>transcribed</small><br>NOTES:</h2>
+              </div>
+              <button id="fileCreate">Create File</button>
+              <a download="notes.txt" id="downloadLink" class="hidden">Download</a>
+            </section>
         </div>
-        <div class="unit-1">
-            <span>3</span>
+        <div class="unit-6 hide">
+            <span> </span>
         </div>
-        <div class="unit-1">
-            <span>4</span>
+        <div class="unit-6 hide">
+            <span> </span>
         </div>
-        <div class="unit-1">
-            <span>5</span>
+        <div class="unit-3 hide" id="instructions">
+            <span id="instructions">use the microphone button to start and stop recording</span>
         </div>
-        <div class="unit-1">
-            <span>6</span>
+        <div class="unit-6 hide" id="buttonsContainer">
+            <div id="micContainer">
+                <img src="img/mic.png" width="50%" height="50%" id="mic" />
+            </div>
+            <div id=DriveButtonContainer>
+                <button class="g-savetodrive" data-src="//example.com/path/to/myfile.pdf" data-filename="note.pdf" data-sitename="?" id="saveGoogleDrive">{"src": "//example.com/path/to/myfile.pdf", "filename": "note.pdf", "sitename": "?"}</button>
+            </div>
         </div>
     </div>
+    <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="5vw3vkv9onbwac1"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <!-- bower:js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
-    <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/lodash/lodash.js"></script>
-    <script src="../bower_components/normalize/normalize.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/lodash/lodash.min.js"></script>
+    <script src="../bower_components/normalize/normalize.min.js"></script>
     <!-- endbower -->
+    <script type="text/javascript" src="https://apis.google.com/js/api.js?onload=onApiLoad"></script>
+    <script src="js/model.js"></script>
     <script src="js/main.js"></script>
 </body>
 
