@@ -1,6 +1,6 @@
 (function(window) {
   var $textArea = $('#textarea');
-  var $notes = $('#notes');
+  var $yourNotes = $('#yourNotes');
   if (!('webkitSpeechRecognition' in window)) {
     upgrade();
   } else {
@@ -29,7 +29,7 @@
         for (var i = event.resultIndex; i < event.results.length; ++i) {
           if (event.results[i].isFinal) {
             $textArea.insertAtCaret(event.results[i][0].transcript);
-            $notes.append('<p>' + event.results[i][0].transcript + '</p>');
+            $yourNotes.append('<p>' + event.results[i][0].transcript + '</p>');
             notes.push(event.results[i][0].transcript);
           }
         }
@@ -46,13 +46,24 @@
     $('.hide').removeClass('hidden');
     $('#notes').addClass('hidden');
   });
+
   $('#micContainer').click(function() {
     console.log('Recording!');
     toggleStartStop();
   });
+
   $(".DriveButtonContainer").click(function() {
     window.location = $(this).find("a").attr("href");
     return false;
+  });
+
+  $("#fileCreate").click(function() {
+    notes = notes.join("\n\n");
+    var a = encodeURI(notes);
+    makeTextFile(notes);
+    $("#downloadLink").attr("href", textFile);
+    $("#downloadLink").removeClass('hidden');
+    $('#notes a').attr('href', a);
   });
 
   function toggleStartStop() {
