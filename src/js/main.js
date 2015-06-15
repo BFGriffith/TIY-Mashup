@@ -59,11 +59,9 @@
 
   $("#fileCreate").click(function() {
     notes = notes.join("\n\n");
-    var a = encodeURI(notes);
     makeTextFile(notes);
     $("#downloadLink").attr("href", textFile);
     $("#downloadLink").removeClass('hidden');
-    $('#notes a').attr('href', a);
   });
 
   function toggleStartStop() {
@@ -73,6 +71,7 @@
     } else {
       recognition.start();
       recognizing = true;
+      $textArea.val('');
     }
   }
 
